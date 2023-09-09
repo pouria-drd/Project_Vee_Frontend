@@ -1,0 +1,145 @@
+@import "./base.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------- */
+/* Fonts area */
+
+@font-face {
+  font-family: "Bahij Nazanin";
+  src: url("./fonts/BahijNazanin/Bahij-Nazanin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "iransans";
+  src: url("./fonts/Iransans/iransans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IRANYekanWeb";
+  src: url("./fonts/IranYekan/IRANYekanWebRegular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Peyda";
+  src: url("./fonts/Peyda/01-Standard/TTF/Peyda-Regular.ttf") format("truetype"),
+    url("./fonts/Peyda/woff/PeydaWeb-Regular.woff") format("woff"),
+    url("./fonts/Peyda/woff2/PeydaWeb-Regular.woff2") format("truetype");
+}
+
+@font-face {
+  font-family: "tanha";
+  src: url("./fonts/Tanha/Tanha-FD-WOL.woff2") format("woff2"),
+    url("./fonts/Tanha/Tanha-FD-WOL.woff") format("woff"),
+    url("./fonts/Tanha/Tanha-FD-WOL.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/IRANYekanX/IRANYekanX-Regular.woff") format("woff"),
+    url("./fonts/IRANYekanX/IRANYekanX-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal;
+  font-weight: bold;
+  src: url("./fonts/IRANYekanX/IRANYekanX-Bold.woff") format("woff"),
+    url("./fonts/IRANYekanX/IRANYekanX-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "satisfy";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/Satisfy/Satisfy-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ds";
+  font-style: normal;
+  font-weight: bold;
+  src: url("./fonts/DancingScript/DancingScript-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ds";
+  font-style: normal;
+  font-weight: medium;
+  src: url("./fonts/DancingScript/DancingScript-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ds";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/DancingScript/DancingScript-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ds";
+  font-style: normal;
+  font-weight: SemiBold;
+  src: url("./fonts/DancingScript/DancingScript-SemiBold.ttf")
+    format("truetype");
+}
+
+/* ---------------------------------------------------------------------- */
+
+.ss02 {
+  font-feature-settings: "ss02";
+  -moz-font-feature-settings: "ss02";
+  -webkit-font-feature-settings: "ss02";
+}
+
+.r2l {
+  direction: rtl;
+}
+
+.l2r {
+  direction: ltr;
+}
+
+.overlay {
+  @apply top-0 left-0 z-10 w-[100vh] h-[100vh] fixed dark:bg-vee-black bg-white;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Scroll area */
+
+::-webkit-scrollbar {
+  @apply w-[5px] h-[5px] cursor-pointer dark:bg-vee-black bg-slate-300 bg-opacity-80;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  @apply rounded-lg dark:bg-slate-600 bg-white bg-opacity-80;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  @apply rounded-lg dark:bg-slate-600 bg-white bg-opacity-80;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Input area */
+
+.base-input {
+  /* direction: rtl; */
+  @apply dark:bg-vee-black dark:text-white font-yekanX text-base py-2 px-3 rounded-lg border-2 dark:border-white border-vee-gray outline-none;
+}
+
+.base-input:focus {
+  transition: 0.5s;
+  @apply border-vee-bg-blue;
+}
+/* dark:outline-vee-black bg-white */
+
+.base-input::placeholder {
+  @apply dark:text-white text-vee-gray text-sm focus:opacity-80 transition;
+}
