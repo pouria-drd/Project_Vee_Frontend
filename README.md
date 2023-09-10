@@ -1,11 +1,11 @@
 # Vee
 
-This is just a simple vue project for Vee frontend.
+This is just a simple vue project for Vee frontend.<br/>
 Vee is a twitter like application that i'm currently working on.
 
 ## Recommended IDE Setup
 
-This template should help get you started developing with Vue 3 in Vite.
+This templates should help if you want to know what it looks like.
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) + [TailwindCSSIntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss).
 

@@ -20,6 +20,10 @@ export default {
         HandleSideNav() {
             this.isOpen = !this.isOpen;
         },
+
+        LinkClicked() {
+            this.isOpen = false;
+        },
     },
 }
 
@@ -58,12 +62,12 @@ export default {
 
             <div class="flex flex-col h-full gap-4 p-4 dark:text-white text-base font-yekanX font-normal">
 
-                <router-link :to="{ name: 'sign-in' }" class=" flex justify-end rounded-xl p-4"
+                <router-link :to="{ name: 'sign-in' }" @click="LinkClicked" class=" flex justify-end rounded-xl p-4"
                     active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100">
                     ورود
                 </router-link>
 
-                <router-link :to="{ name: 'sign-up' }" class="flex justify-end rounded-xl p-4"
+                <router-link :to="{ name: 'sign-up' }" @click="LinkClicked" class="flex justify-end rounded-xl p-4"
                     active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100">
                     ثبت نام
                 </router-link>
