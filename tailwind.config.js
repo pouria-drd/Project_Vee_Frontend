@@ -6,13 +6,15 @@ export default {
       screens: {},
 
       colors: {
-        // "vee-gray": "#959EA6",
+        // "vee-gray": "#959EA6", 9191E9
+        "br-blue": "#0496FF",
+
         "vee-gray": "#bec8c8",
         "vee-black": "#292D36",
 
-        "vee-bg-dark": "#17181C",
-        "vee-bg-light": "#ECEFF5",
         "vee-bg-blue": "#0496FF",
+        "vee-bg-dark": "#202124",
+        "vee-bg-light": "#ECEFF5",
         "vee-bg-green": "#058E3F",
       },
 
@@ -25,7 +27,9 @@ export default {
         bjn: "Bahij Nazanin",
       },
 
-      borderRadius: {},
+      borderRadius: {
+        "vee-br-10": "10px",
+      },
     },
   },
   plugins: [],
