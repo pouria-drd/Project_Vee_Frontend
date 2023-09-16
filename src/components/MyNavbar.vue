@@ -1,31 +1,43 @@
 <script>
 import XIcon from "../components/icons/X_Icon.vue";
-import veeIcon from "../components/icons/Vee_Icon.vue";
-import menuIcon from "../components/icons/Menu_Icon.vue";
+import FloatingSidebar from "./FloatingSidebar.vue";
+import VeeIcon from "../components/icons/Vee_Icon.vue";
+import MenuIcon from "../components/icons/Menu_Icon.vue";
+import UserIcon from "../components/icons/User_Icon.vue";
 
 export default {
     name: "MyNavbar",
 
     components: {
         XIcon,
-        veeIcon,
-        menuIcon,
+        VeeIcon,
+        MenuIcon,
+        UserIcon,
+        FloatingSidebar
     },
 
     data() {
         return {
-            isOpen: false,
+            isMenuOpen: false,
+
+            user: {
+                username: "pouria",
+                email: "test2@example.com",
+                profileImageURL: "https://i.pravatar.cc/100?img=13",
+            }
         };
     },
 
     methods: {
-        HandleSideNav() {
-            this.isOpen = !this.isOpen;
+        ToggleMenu() {
+            this.isMenuOpen = !this.isMenuOpen;
         },
+    },
 
-        LinkClicked() {
-            this.isOpen = false;
-        },
+    watch: {
+        $route(to, from) {
+            this.isMenuOpen = false;
+        }
     },
 }
 
@@ -36,7 +48,7 @@ export default {
         <!-- Top nav ******************************************************************* -->
         <nav id="topNav" class="dark:bg-vee-bg-dark bg-white
              border-slate-400 dark:border-br-blue border-b-2
-             flex items-center justify-end px-8 h-[10vh]">
+             flex items-center justify-end px-8 w-full h-[10vh] fixed">
 
             <div class=" flex w-1/3 ">
                 <a href=" /">
@@ -51,36 +63,10 @@ export default {
             </div>
 
             <div class="flex justify-end w-1/3 transition">
-                <menu-icon v-if="!isOpen" class="hover:scale-105 transition" @click="HandleSideNav" />
-                <x-icon v-else class="hover:scale-105 transition" @click="HandleSideNav" />
+                <user-icon class="hover:scale-105 transition" @click="ToggleMenu" />
             </div>
         </nav>
 
-        <!-- Side nav ****************************************************************** -->
-
-        <nav id="sideNav" class="
-            dark:bg-vee-black bg-white
-            border-slate-400 dark:border-br-blue
-              h-[90vh] fixed right-0 z-10" :class="{
-                  'w-[80vw] md:w-[35vw] lg:w-[30vw] xl:w-[25vw] border-l-2': isOpen, 'w-0': !isOpen
-              }" style="transition: 0.35s;">
-
-            <div class="flex flex-col h-full gap-4 px-8 py-6 dark:text-white text-base font-yekanX font-normal">
-
-                <router-link :to="{ name: 'sign-in' }" @click="LinkClicked" class=" flex justify-end rounded-xl p-4"
-                    active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100">
-                    ورود
-                </router-link>
-
-                <router-link :to="{ name: 'sign-up' }" @click="LinkClicked" class="flex justify-end rounded-xl p-4"
-                    active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100">
-                    ثبت نام
-                </router-link>
-
-            </div>
-
-        </nav>
-
-        <!-- end *********************************************************************** -->
+        <floating-sidebar v-if="isMenuOpen" :user="user" class="top-[12vh] right-3" />
     </main>
 </template>

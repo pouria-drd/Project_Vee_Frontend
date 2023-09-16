@@ -9,6 +9,7 @@ export default {
         // "vee-gray": "#959EA6", 9191E9
         "br-blue": "#0496FF",
 
+        "vee-red": "#FF5666",
         "vee-gray": "#bec8c8",
         "vee-black": "#292D36",
 
@@ -29,6 +30,7 @@ export default {
 
       borderRadius: {
         "vee-br-10": "10px",
+        "vee-br-50": "50px",
       },
     },
   },
