@@ -36,44 +36,49 @@ export default {
         </div>
 
         <div class="flex flex-col items-end justify-center border-slate-400 dark:border-white border-b py-2 gap-1">
-            <router-link class="flex flex-row items-center justify-end w-full h-10 p-2 gap-2" :to="{ name: 'profile' }"
-                active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100 rounded-vee-br-10">
+            <router-link
+                class="flex flex-row items-center justify-end w-full h-10 p-2 gap-2 transition hover:scale-105 hover:dark:bg-black hover:dark:bg-opacity-20 hover:bg-slate-100 hover:rounded-vee-br-10"
+                :to="{ name: 'profile' }" active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100 rounded-vee-br-10">
                 <p class="text-sm">پروفایل</p>
                 <profile-icon />
             </router-link>
 
-            <router-link class="flex flex-row items-center justify-end w-full h-10 p-2 gap-2" :to="{ name: 'settings' }"
-                active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100 rounded-vee-br-10">
+            <router-link
+                class="flex flex-row items-center justify-end w-full h-10 p-2 gap-2 transition hover:scale-105 hover:dark:bg-black hover:dark:bg-opacity-20 hover:bg-slate-100 hover:rounded-vee-br-10"
+                :to="{ name: 'settings' }" active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100 rounded-vee-br-10">
                 <p class="text-sm">تنظیمات</p>
                 <settings-icon />
             </router-link>
         </div>
 
         <div class="flex flex-col items-end justify-center border-slate-400 dark:border-white border-b py-2 gap-1">
-            <router-link class="flex flex-row items-center justify-end w-full h-10 p-2 gap-2" :to="{ name: 'about' }"
-                active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100 rounded-vee-br-10">
+            <router-link
+                class="flex flex-row items-center justify-end w-full h-10 p-2 gap-2 transition hover:scale-105 hover:dark:bg-black hover:dark:bg-opacity-20 hover:bg-slate-100 hover:rounded-vee-br-10"
+                :to="{ name: 'about' }" active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100 rounded-vee-br-10">
                 <p class="text-sm">درباره</p>
                 <about-icon />
             </router-link>
 
-            <router-link class="flex flex-row items-center justify-end w-full h-10 p-2 gap-2" :to="{ name: 'help' }"
-                active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100 rounded-vee-br-10">
+            <router-link
+                class="flex flex-row items-center justify-end w-full h-10 p-2 gap-2 transition hover:scale-105 hover:dark:bg-black hover:dark:bg-opacity-20 hover:bg-slate-100 hover:rounded-vee-br-10"
+                :to="{ name: 'help' }" active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100 rounded-vee-br-10">
                 <p class="text-sm">راهنما</p>
                 <help-icon />
             </router-link>
         </div>
 
         <div class="flex flex-col items-end justify-center py-2 gap-1">
-            <router-link class="flex flex-row items-center justify-end w-full h-10 p-2 gap-2" :to="{ name: 'support' }"
-                active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100 rounded-vee-br-10">
+            <router-link
+                class="flex flex-row items-center justify-end w-full h-10 p-2 gap-2 transition hover:scale-105 hover:dark:bg-black hover:dark:bg-opacity-20 hover:bg-slate-100 hover:rounded-vee-br-10"
+                :to="{ name: 'support' }" active-class="dark:bg-black dark:bg-opacity-20 bg-slate-100 rounded-vee-br-10">
                 <p class="text-sm">پشتیبانی</p>
                 <support-icon />
             </router-link>
 
-            <button class="flex flex-row items-center justify-end w-full h-10 p-2 gap-2 text-vee-red">
+            <button
+                class="flex flex-row items-center justify-end w-full h-10 p-2 gap-2 text-vee-red transition hover:scale-105 hover:dark:bg-black hover:dark:bg-opacity-20 hover:bg-slate-100 hover:rounded-vee-br-10">
                 <p class="text-sm text-vee-red">خروج</p>
                 <logout-icon />
-            </button>
-        </div>
+        </button>
     </div>
-</template>
+</div></template>
